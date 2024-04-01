@@ -7,22 +7,25 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f8ea; /* Light green background color */
+            background-color: #494747; /* Light green background color */
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            flex-direction: column;
         }
         .container {
-            background-color: #ffffff; /* White container background color */
+            background-color: #2a2929;
+             /* White container background color */
+             box-shadow: rgb(45, 44, 44) 4px 8px;
             border-radius: 10px; /* Rounded corners */
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Box shadow */
+            /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); Box shadow */
             padding: 50px;
             text-align: center;
-            width: 500px;
-            height: 150px;
+            width: 450px;
+            height: 210px;
         }
         label {
             font-weight: bold;
@@ -36,23 +39,43 @@
             box-sizing: border-box;
         }
         button {
-            background-color: #4caf50; /* Green submit button */
+            background-color: #efa124; /* Green submit button */
             color: white;
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            font-size: 20px;
+            margin-top: 10px;
+            font-weight: bold;
         }
         button:hover {
-            background-color: #45a049; /* Darker green on hover */
+            background-color: #d79f1a; /* Darker green on hover */
+        }
+        .title{
+            font-size: 45px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            padding: 50px; 
+            color: rgb(214, 161, 15);
+            position: fixed;
+            top: 50px;
+
+        }
+
+        #ans{
+            color:#efa124;
         }
     </style>
     <script src="script.js"></script>
 </head>
 <body>
+    <div class="title">
+        <h1>growthscience.in</h1>
+    </div> 
     <div class="container">
-        <label for="code">Enter your code to check its authenticity...</label> <br>
+        <label for="code" style="color: white; font-size: 26px;">Enter your code to check its authenticity...</label> <br>
         <input type="text" id="code" name="code"> <br>
         <br>
         <button type="submit" value="Submit" onclick="performBinarySearch()"> Submit</button>
